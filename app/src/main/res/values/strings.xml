@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">WordListSQL</string>
+    <string name="hint_word">Word...</string>
+    <string name="hint_definition">Definition...</string>
+    <string name="button_save">Save</string>
+    <string name="button_new">New</string>
+    <string name="button_edit">Edit</string>
+    <string name="button_delete">Delete</string>
+    <string name="empty_not_saved">Word not saved because it is empty.</string>
+</resources>
