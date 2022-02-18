@@ -9,4 +9,9 @@
     <string name="button_edit">Edit</string>
     <string name="button_delete">Delete</string>
     <string name="empty_not_saved">Word not saved because it is empty.</string>
+    <string name="button_search">Search</string>
+    <string name="search_results">Search results.</string>
+    <string name="menu_search">Search...</string>
+    <string name="no_result">No result.</string>
+    <string name="empty_word_not_saved">This is empty</string>
 </resources>

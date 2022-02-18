@@ -4,6 +4,8 @@ package com.example.wordlistsql;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -23,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private WordListOpenHelper mDB;
     private RecyclerView mRecyclerView;
     private WordListAdapter mAdapter;
-    private int mLastPosition;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,24 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                // Starts search activity.
+                Intent intent = new Intent(getBaseContext(), SearchActivity.class);
+                startActivity(intent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -74,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(
                             getApplicationContext(),
-                            R.string.empty_not_saved,
+                            R.string.empty_word_not_saved,
                             Toast.LENGTH_LONG).show();
                 }
             }
